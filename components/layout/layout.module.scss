@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  //height: calc(100vh - 64px);
+  padding: 20px 9px 300px 9px;
+}
+
+.main > section {
+  //padding: 32px;
+}
