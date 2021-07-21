@@ -1,4 +1,4 @@
-//import Head from "next/head";
+import Head from "next/head";
 //import styles from "../styles/Home.module.css";
 //import { Configuration, ConfigurationProps } from '@react-md/layout'
 
@@ -12,10 +12,17 @@ import Home from '../pages/home'
 
 export default function Index() {
   return (
+    <>
+    <Head>
+      <title>Árvore da Vida - Confecção & Estamparia</title>
+      <meta name="google-site-verification" content="google-site-verification=xlM8hyaZM3KxzbPV7zdlqN_JltzTplOovfx2jUESCe4" />
+    </Head>
     <Layout>
       <Home />
     </Layout>
+    </>
   )
 }
 
 //Index.getLayout = (page) => <Layout>{page}</Layout>
+// google-site-verification=xlM8hyaZM3KxzbPV7zdlqN_JltzTplOovfx2jUESCe4
