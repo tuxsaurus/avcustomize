@@ -14,8 +14,9 @@ export default function Index() {
   return (
     <>
     <Head>
-      <title>Árvore da Vida - Confecção & Estamparia</title>
+    <title>Árvore da Vida - Confecção & Estamparia - Camisas Personalizadas</title>
       <meta name="google-site-verification" content="google-site-verification=xlM8hyaZM3KxzbPV7zdlqN_JltzTplOovfx2jUESCe4" />
+      <meta name="description" content="Camisas Personalizadas. Serigrafia, estamparia, sublimação. Material gráfico." />
     </Head>
     <Layout>
       <Home />

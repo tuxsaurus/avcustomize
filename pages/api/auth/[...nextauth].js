@@ -1,7 +1,7 @@
 // /pages/api/auth/[...nextauth].js
 
-import NextAuth from "next-auth";
-import Providers from "next-auth/providers";
+import NextAuth from 'next-auth'
+import Providers from 'next-auth/providers'
 
 export default NextAuth({
   providers: [
@@ -24,6 +24,9 @@ export default NextAuth({
     //  from: "NextAuth.js <no-reply@example.com>",
     //}),
   ],
+  pages: {
+    signIn: '/signin',
+  },
   // Optional SQL or MongoDB database to persist users
   database: process.env.DATABASE_URL,
-});
+})

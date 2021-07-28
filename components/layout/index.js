@@ -9,7 +9,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>Árvore da Vida Customize</title>
+        
       </Head>
       <Header />
       <main className={styles.main}>{children}</main>

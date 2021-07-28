@@ -37,11 +37,11 @@ import {
   MdHelp,
 } from 'react-icons/md'
 
-//import av from 'public/av.svg'
+import { IoMdPerson } from 'react-icons/io'
+//import av from 'public/favicon.icoav.svg'
 
 import styles from './header.module.scss'
 
-//<Box w="100%" h="200px" bgGradient="linear(to-r, green.200, pink.500)" />
 export default function Header() {
   return (
     <div className={styles.header}>
@@ -65,7 +65,7 @@ export default function Header() {
         </Link>
         <Link href="/auth">
           <Button variant="link">
-            <MdAccountCircle className={styles.icon} />
+            <IoMdPerson className={styles.icon} />
           </Button>
         </Link>
       </div>
