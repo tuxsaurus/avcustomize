@@ -3,7 +3,7 @@ import Layout from "@/components/layout";
 import { useRouter } from "next/router";
 
 //import Tshirt from "../../prod/tshirt";
-import Tshirt from "../tshirt";
+// import Tshirt from "../tshirt";
 
 function getRouteData() {
   //const router = useRouter();
