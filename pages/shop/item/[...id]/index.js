@@ -31,6 +31,13 @@ export default function Item({ stars }) {
   const router = useRouter();
 
   callExternalApi();
+  var asd = async () => { 
+    var xxx = await callExternalApi();
+    xxx.then(console.log(this))
+    console.log(xxx);
+    return xxx
+  }
+  console.log(asd);
 
   if (getRouteData() === "/shop/item/tshirt") {
     return (

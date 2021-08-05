@@ -2,7 +2,7 @@
 import Layout from '../../components/layout'
 import Sidebar from '../../components/sidebar'
 
-import { Heading } from '@chakra-ui/react'
+// import { Heading } from '@chakra-ui/react'
 
 import { useState } from 'react'
 
@@ -14,7 +14,7 @@ export default function About() {
   return (
     <Layout>
       <section>
-        <Heading textAlign="center">Sobre Nós</Heading>
+        <h1 textAlign="center">Sobre Nós</h1>
 
         <p>
           Na Árvore da Vida desenvolvemos e produzimos diversos produtos com

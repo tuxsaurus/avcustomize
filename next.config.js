@@ -13,8 +13,12 @@ module.exports = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  i18n: {
+    locales: ['de', 'en', 'es', 'fr', 'pt-br'],
+    defaultLocale: 'pt-br',
+  },
   images: {
-    domains: ['lh3.googleusercontent.com'],
+    domains: ['lh3.googleusercontent.com', 'media.graphcms.com'],
   },
   async redirects() {
     return [

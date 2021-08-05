@@ -1,16 +1,16 @@
 //import Layout from '../../components/layout'
 //import Sidebar from '../../components/sidebar'
 
-import { Box, Heading } from '@chakra-ui/react'
+// import { Box, Heading } from '@chakra-ui/react'
 
 import styles from '../../pages/home/home.module.scss'
 
 export default function Home() {
   return (
     <>
-      <Heading>I'm a Heading</Heading>
+      <h1>I'm a Heading</h1>
 
-      <Box w="100%" h="200px" bgGradient="linear(to-r, green.200, pink.500)" />
+      {/* <Box w="100%" h="200px" bgGradient="linear(to-r, green.200, pink.500)" /> */}
 
       <img
         src="/av.svg"
@@ -20,7 +20,9 @@ export default function Home() {
         alt="Vercel Logo"
       />
       <section>
-        <Heading>Hero</Heading>
+        <h1>Hero</h1>
+        <button className="btn btn-primary">DaisyUI Button</button>
+        <button className="btn btn-primary rounded-full">DaisyUI Button customized</button>
       </section>
       <section>
         <h1>Shop</h1>

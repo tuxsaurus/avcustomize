@@ -3,17 +3,17 @@ import React from 'react'
 import { signIn, signOut, useSession } from 'next-auth/client'
 //import Image from 'next/image'
 
-import { Heading } from '@chakra-ui/react'
-import { Button, ButtonGroup } from '@chakra-ui/react'
-import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
+// import { Heading } from '@chakra-ui/react'
+// import { Button, ButtonGroup } from '@chakra-ui/react'
+// import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
 // from '@chakra-ui/react'
 //
 //import { FcGoogle } from 'react-icons/fc'
 import {
-	FaFacebookSquare,
-	FaFacebookF,
-	FaGoogle,
-	FaTwitter,
+  FaFacebookSquare,
+  FaFacebookF,
+  FaGoogle,
+  FaTwitter,
 } from 'react-icons/fa'
 
 import Layout from '../../components/layout'
@@ -23,47 +23,54 @@ const myStyle = { width: '20px', paddingRight: '12px' }
 const userImage = { width: '96px', height: '96px' }
 
 export default function Auth() {
-	const [session, loading] = useSession()
-	//console.log("router");
-	//console.log(r());
-	return (
-		<>
-			<Layout>
-				{!session && (
-					<>
-						<Heading>Autenticação</Heading>
-						<br></br>
+  const [session, loading] = useSession()
+  //console.log("router");
+  //console.log(r());
+  return (
+    <>
+      <Layout>
+        {!session && (
+          <>
+            <h1>Autenticação</h1>
+            <br></br>
 
-						<Button
-							onClick={() => signIn('google')}
-							colorScheme="red"
-							size="md"
-							className={styles.btn}
-						>
-							<div style={myStyle}>
-								<FaGoogle />
-							</div>
-							Entrar com Google
-						</Button>
-					</>
-				)}
-				{session && (
-					<>
-						<Avatar
-							alt={session.user.name}
-							src={session.user.image}
-							style={userImage}
-						/>
-						Signed in as {session.user.email} <br />
-						<Button colorScheme="red" size="md" onClick={() => signOut()}>
-							Sair
-						</Button>
-					</>
-				)}
-			</Layout>
-		</>
-	)
+            <button
+              onClick={() => signIn('google')}
+              colorScheme="red"
+              size="md"
+              className={styles.btn}
+            >
+              <div style={myStyle}>
+                <FaGoogle />
+              </div>
+              Entrar com Google
+            </button>
+            <button className="btn btn-primary">
+              <div style={myStyle}>
+                <FaGoogle />
+              </div>
+              DaisyUI Button
+            </button>
+          </>
+        )}
+        {session && (
+          <>
+            Signed in as {session.user.email} <br />
+            <button colorScheme="red" size="md" onClick={() => signOut()}>
+              Sair
+            </button>
+          </>
+        )}
+      </Layout>
+    </>
+  )
 }
+
+//<Avatar
+//  alt={session.user.name}
+//  src={session.user.image}
+//  style={userImage}
+//>
 
 //<Button
 //  onClick={() => signIn('twitter')}
