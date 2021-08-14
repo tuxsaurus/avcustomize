@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Layout from '@/components/layout'
-import { Heading, Button } from '@chakra-ui/react'
 
 export default function Control({ children }) {
   const [counter, setCounter] = useState(1)
@@ -26,10 +25,7 @@ export default function Control({ children }) {
   return (
     <>
       <Layout>
-        <Heading>Weather</Heading>
-        <Button onClick={() => setCounter(counter + 1)} size="xl" width="200px">
-          {counter}
-        </Button>
+        <h1>Weather</h1>
       </Layout>
     </>
   )

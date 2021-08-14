@@ -23,11 +23,11 @@ export default function Index() {
       <NextSeo
         title="Árvore da Vida - Confecção & Estamparia - Camisas Personalizadas"
         description="Camisas Personalizadas. Serigrafia, estamparia, sublimação. Material gráfico."
-        canonical="https://www.canonical.ie/"
+        canonical="https://www.avcustomize.com.br/"
         openGraph={{
-          url: 'https://www.url.ie/a',
-          title: 'Open Graph Title',
-          description: 'Open Graph Description',
+          url: 'https://www.avcustomize.com.br/',
+          title: 'Produtos e serviços de customização',
+          description: 'Produtos e serviços de customização',
           images: [
             {
               url: 'https://www.example.ie/og-image-01.jpg',

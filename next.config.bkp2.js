@@ -1,11 +1,6 @@
-const withPlugins = require('next-compose-plugins')
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
-
 //const withMDX = require('@next/mdx')()
-//const withMdxEnhanced = require('next-mdx-enhanced')
-//const withOptimizedImages = require('next-optimized-images')
+const withMdxEnhanced = require('next-mdx-enhanced')
+const withOptimizedImages = require('next-optimized-images')
 
 // const withReactSvg = require("next-react-svg");
 // const path = require("path");
@@ -13,26 +8,21 @@ const withMDX = require('@next/mdx')({
   extension: /\.mdx$/,
 })
 
-const nextConfig = {
+module.exports = {
   pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
   typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if
     // your project has type errors.
     // !! WARN !!
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
   },
   i18n: {
-    locales: ['de', 'en', 'es', 'fr', 'pt-BR'],
-    defaultLocale: 'pt-BR',
-    localeDetection: false,
+    locales: ['de', 'en', 'es', 'fr', 'pt-br'],
+    defaultLocale: 'pt-br',
   },
   images: {
-    domains: [
-      'lh3.googleusercontent.com',
-      'media.graphcms.com',
-      'assets.vercel.com',
-    ],
+    domains: ['lh3.googleusercontent.com', 'media.graphcms.com'],
   },
   async redirects() {
     return [
@@ -49,12 +39,3 @@ const nextConfig = {
     ]
   },
 }
-
-module.exports = withPlugins(
-  [
-    // add plugins here..
-    [withBundleAnalyzer],
-    [withMDX],
-  ],
-  nextConfig
-)
