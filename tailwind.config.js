@@ -13,9 +13,9 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    plugin(function({ addBase, theme }) {
+    plugin(function ({ addBase, theme }) {
       addBase({
-        h1: { fontSize: theme('fontSize.4xl') },
+        h1: { fontSize: theme('fontSize.5xl') },
         h2: { fontSize: theme('fontSize.3xl') },
         h3: { fontSize: theme('fontSize.2xl') },
         h4: { fontSize: theme('fontSize.xl') },
@@ -26,6 +26,9 @@ module.exports = {
   ],
   daisyui: {
     themes: [
+      'dracula',
+      'halloween',
+      'dark', // and some pre-defined theme
       'emerald',
       {
         mytheme: {
@@ -43,7 +46,6 @@ module.exports = {
           // other colors
         },
       },
-      'dark', // and some pre-defined theme
       'forest',
       'synthwave',
     ],

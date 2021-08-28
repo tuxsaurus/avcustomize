@@ -3,6 +3,8 @@
 
 import { createStore } from 'redux'
 import { createWrapper, HYDRATE } from 'next-redux-wrapper'
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly'
+//import reducers from './reducers'
 
 // create your reducer
 const reducer = (state = { tick: 'init' }, action) => {
@@ -17,7 +19,16 @@ const reducer = (state = { tick: 'init' }, action) => {
 }
 
 // create a makeStore function
-const makeStore = (context) => createStore(reducer)
+//const makeStore = (context) => createStore(reducer)
+
+const makeStore = () => {
+  // Create store
+  const store = createStore(reducer, composeWithDevTools())
+
+  // Return store
+  return store
+}
 
 // export an assembled wrapper
-export const wrapper = createWrapper(makeStore, { debug: true })
+//export const wrapper = createWrapper(makeStore, { debug: true })
+export const wrapper = createWrapper(makeStore, { debug: false })

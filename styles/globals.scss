@@ -1,5 +1,13 @@
 /* ./styles/globals.scss */
 
+hr {
+  display: block;
+  //border: 0.1rem;
+  border-top: 0.1rem solid;
+  //red;
+  //solid;
+  width: 90%;
+}
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */

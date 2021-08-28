@@ -37,7 +37,7 @@ export default function Header() {
         </Link>
       </div>
       <div className={styles.row}>
-        <Link href="/shop/cart">
+        <Link href="/search">
           <button variant="link">
             <MdSearch className={styles.icon} />
           </button>

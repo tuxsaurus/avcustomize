@@ -4,6 +4,7 @@ import styles from './footer.module.scss'
 export default function Footer() {
   return (
     <div id="footer" className={styles.footer}>
+      <hr></hr>
       <div>
         <ul className={styles.ul}>
           <li>
